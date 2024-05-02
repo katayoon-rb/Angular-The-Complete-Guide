@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RecipeItemComponent } from './recipe-item/recipe-item.component';
 import { Recipe } from '../../shared/recipe.model';
 import { CommonModule } from '@angular/common';
@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
   imports: [RecipeItemComponent, CommonModule],
 })
 export class RecipeListComponent {
+  @Output() recipeWasSelected = new EventEmitter<Recipe>();
   recipes: Recipe[] = [
     new Recipe(
       'title',
@@ -31,4 +32,8 @@ export class RecipeListComponent {
 
   constructor() {}
   ngOnInit() {}
+
+  onRecipeSelected(recipe: Recipe) {
+    this.recipeWasSelected.emit(recipe);
+  }
 }
