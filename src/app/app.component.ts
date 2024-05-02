@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { CommonModule } from '@angular/common';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { CommonModule } from '@angular/common';
     ShoppingListComponent,
     CommonModule,
   ],
+  providers: [ShoppingListService],
 })
 export class AppComponent {
   loadedFeature = 'recipe';
