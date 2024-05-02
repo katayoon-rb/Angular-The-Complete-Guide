@@ -20,10 +20,4 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
   ],
   providers: [ShoppingListService],
 })
-export class AppComponent {
-  loadedFeature = 'recipe';
-
-  onNavigate(feature: string) {
-    this.loadedFeature = feature;
-  }
-}
+export class AppComponent {}
