@@ -1,27 +1,37 @@
-# MyFirstApp
+# The Complete Guide to Angular 2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+Welcome to "The Complete Guide to Angular 2" course! 🚀
 
-## Development server
+This comprehensive course is your ultimate guide to mastering Angular 2, the popular JavaScript framework for building dynamic web applications. Led by instructor Maximilian Schwarzmüller, you'll dive deep into Angular 2 and learn everything you need to know to become a proficient Angular developer.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Course Overview
 
-## Code scaffolding
+- **Course Name**: The Complete Guide to Angular 2
+- **Instructor**: [Maximilian Schwarzmüller](https://www.udemy.com/user/maximilian-schwarzmuller/)
+- **Platform**: Udemy
+- **Enrollment Link**: [Enroll Now](https://www.udemy.com/course/the-complete-guide-to-angular-2/?couponCode=ST2MT43024)
+- **Skill Level**: Beginner to Intermediate
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## What You'll Learn
 
-## Build
+- Master the fundamentals of Angular 2 and TypeScript
+- Build dynamic, single-page web applications with Angular 2
+- Understand Angular modules, components, templates, and data binding
+- Implement routing, forms, and HTTP services with Angular 2
+- Deploy Angular 2 applications to production
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Why Choose This Course
 
-## Running unit tests
+- Comprehensive curriculum covering all aspects of Angular 2 development
+- Hands-on projects and coding exercises to reinforce learning
+- Instructor support and guidance throughout the course
+- Lifetime access to course materials
+- Certification upon completion
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Enroll Now
 
-## Running end-to-end tests
+Ready to become an Angular 2 expert? Enroll now in The Complete Guide to Angular 2 on Udemy and start building powerful web applications with Angular 2! 🌟
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+[Enroll Now](https://www.udemy.com/course/the-complete-guide-to-angular-2/?couponCode=ST2MT43024)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Happy coding! 💻🎉
