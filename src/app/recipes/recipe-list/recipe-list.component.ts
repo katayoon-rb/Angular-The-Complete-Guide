@@ -3,6 +3,7 @@ import { RecipeItemComponent } from './recipe-item/recipe-item.component';
 import { Recipe } from '../../shared/recipe.model';
 import { CommonModule } from '@angular/common';
 import { RecipeService } from '../recipe.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-list',
@@ -13,9 +14,16 @@ import { RecipeService } from '../recipe.service';
 export class RecipeListComponent {
   recipes: Recipe[];
 
-  constructor(private recipeService: RecipeService) {}
+  constructor(
+    private recipeService: RecipeService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.recipes = this.recipeService.getRecipes();
+  }
+  onNewRecipe() {
+    this.router.navigate(['new'], { relativeTo: this.route });
   }
 }

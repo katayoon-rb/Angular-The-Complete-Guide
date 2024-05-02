@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
@@ -16,6 +16,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     RecipesComponent,
     ShoppingListComponent,
     CommonModule,
+    RouterModule,
   ],
   providers: [ShoppingListService],
 })
