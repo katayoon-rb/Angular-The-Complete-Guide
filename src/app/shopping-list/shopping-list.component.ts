@@ -7,7 +7,6 @@ import { Ingredient } from '../shared/ingredient.model';
   selector: 'app-shopping-list',
   standalone: true,
   templateUrl: './shopping-list.component.html',
-  styleUrl: './shopping-list.component.css',
   imports: [ShoppingEditComponent, CommonModule],
 })
 export class ShoppingListComponent implements OnInit {
@@ -18,4 +17,8 @@ export class ShoppingListComponent implements OnInit {
 
   constructor() {}
   ngOnInit() {}
+
+  onIngredientAdded(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+  }
 }
