@@ -6,8 +6,8 @@ import { Ingredient } from '../shared/ingredient.model';
 @Component({
   selector: 'app-shopping-list',
   standalone: true,
-  templateUrl: './shopping-list.component.html',
   imports: [ShoppingEditComponent, CommonModule],
+  templateUrl: './shopping-list.component.html',
 })
 export class ShoppingListComponent implements OnInit {
   ingredients: Ingredient[] = [

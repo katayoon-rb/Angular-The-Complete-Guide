@@ -7,9 +7,9 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-recipes',
   standalone: true,
+  imports: [RecipeListComponent, RecipeDetailComponent, CommonModule],
   templateUrl: './recipes.component.html',
   styleUrl: './recipes.component.css',
-  imports: [RecipeListComponent, RecipeDetailComponent, CommonModule],
 })
 export class RecipesComponent {
   selectedRecipe: Recipe;

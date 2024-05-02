@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
   imports: [
     RouterOutlet,
     HeaderComponent,

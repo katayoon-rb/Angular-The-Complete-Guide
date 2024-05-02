@@ -12,6 +12,7 @@ import { Ingredient } from '../../shared/ingredient.model';
 @Component({
   selector: 'app-shopping-edit',
   standalone: true,
+  imports: [],
   templateUrl: './shopping-edit.component.html',
 })
 export class ShoppingEditComponent implements OnInit {
