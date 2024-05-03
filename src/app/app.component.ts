@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { CommonModule } from '@angular/common';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 @Component({
@@ -11,12 +12,13 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
   standalone: true,
   templateUrl: './app.component.html',
   imports: [
+    RouterModule,
     RouterOutlet,
+    CommonModule,
+    HttpClientModule,
     HeaderComponent,
     RecipesComponent,
     ShoppingListComponent,
-    CommonModule,
-    RouterModule,
   ],
   providers: [ShoppingListService],
 })
