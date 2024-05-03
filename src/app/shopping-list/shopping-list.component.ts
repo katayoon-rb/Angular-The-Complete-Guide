@@ -14,7 +14,6 @@ import { ShoppingListService } from './shopping-list.service';
 })
 export class ShoppingListComponent implements OnInit {
   ingredients: Ingredient[];
-  private igChangeSub: Subscription;
 
   constructor(private slService: ShoppingListService) {}
 
@@ -23,8 +22,5 @@ export class ShoppingListComponent implements OnInit {
     this.slService.ingredientsChanged.subscribe((ingredients: Ingredient[]) => {
       this.ingredients = ingredients;
     });
-  }
-  ngOnDestroy(): void {
-    this.igChangeSub.unsubscribe();
   }
 }

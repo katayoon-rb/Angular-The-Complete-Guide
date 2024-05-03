@@ -16,8 +16,12 @@
 <div class="row">
   <div class="col-xs-12">
     <ul>
-      <li>
-        <a (click)="onAddToShoppingList()" style="cursor: pointer">
+      <li routerLinkActive="active">
+        <a
+          (click)="onAddToShoppingList()"
+          style="cursor: pointer"
+          routerLink="/shopping-list"
+        >
           To Shopping List
         </a>
       </li>
