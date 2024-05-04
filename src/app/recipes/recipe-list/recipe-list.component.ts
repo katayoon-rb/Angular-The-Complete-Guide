@@ -1,18 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
-import { RecipeItemComponent } from './recipe-item/recipe-item.component';
-import { Recipe } from '../../shared/recipe.model';
+import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-list',
-  standalone: true,
   templateUrl: './recipe-list.component.html',
-  imports: [RecipeItemComponent, CommonModule],
 })
-export class RecipeListComponent {
+export class RecipeListComponent implements OnInit, OnDestroy {
   recipes: Recipe[];
   subscription: Subscription;
 

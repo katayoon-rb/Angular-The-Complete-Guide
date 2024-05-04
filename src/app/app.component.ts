@@ -1,25 +1,19 @@
-import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from './header/header.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './auth/auth.service';
+import { LoggingService } from './logging.service';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   templateUrl: './app.component.html',
-  imports: [
-    RouterModule,
-    RouterOutlet,
-    CommonModule,
-    HttpClientModule,
-    HeaderComponent,
-    RecipesComponent,
-    ShoppingListComponent,
-  ],
-  providers: [ShoppingListService],
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+  constructor(
+    private authService: AuthService,
+    private loggingService: LoggingService
+  ) {}
+
+  ngOnInit() {
+    this.authService.autoLogin();
+    this.loggingService.printLog('Hello from AppComponent ngOnInit');
+  }
+}
