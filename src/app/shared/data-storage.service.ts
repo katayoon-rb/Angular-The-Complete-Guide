@@ -5,6 +5,7 @@ import { map, tap, take, exhaustMap } from 'rxjs/operators';
 import { Recipe } from '../recipes/recipe.model';
 import { RecipeService } from '../recipes/recipe.service';
 import { AuthService } from '../auth/auth.service';
+import { environment } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class DataStorageService {
@@ -17,7 +18,7 @@ export class DataStorageService {
   storeRecipes() {
     const recipes = this.recipeService.getRecipes();
     this.http
-      .put(`${process.env.FIREBASE_API}recipes.json`, recipes)
+      .put(`${environment.FIREBASE_API}recipes.json`, recipes)
       .subscribe((response) => {
         console.log(response);
       });
@@ -25,7 +26,7 @@ export class DataStorageService {
 
   fetchRecipes() {
     return this.http
-      .get<Recipe[]>(`${process.env.FIREBASE_API}recipes.json`)
+      .get<Recipe[]>(`${environment.FIREBASE_API}recipes.json`)
       .pipe(
         map((recipes) => {
           return recipes.map((recipe) => {
